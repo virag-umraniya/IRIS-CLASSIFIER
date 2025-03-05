@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Classifier - Predict</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="about-page">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-seedling"></i> 
+                <span>Iris Classifier</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about" class="active">Predict</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <h1>Iris Species Prediction</h1>
+                <p>Enter flower measurements to classify the Iris species</p>
+            </div>
+        </section>
+
+        <section class="about-info">
+            <h2>How It Works</h2>
+            <div class="about-info-container">
+                <div class="about-info-text">
+                    <p>Our classifier uses a Logistic Regression model trained on the classic Iris dataset. This statistical model has learned to recognize patterns in the four key measurements of Iris flowers to distinguish between three species:</p>
+                    
+                    <div class="species-cards">
+                        <div class="species-card">
+                            <h3>Iris Setosa</h3>
+                            <p>Known for its small petals and wide sepals. Native to eastern Siberia.</p>
+                        </div>
+                        <div class="species-card">
+                            <h3>Iris Versicolor</h3>
+                            <p>Medium-sized flower with distinctive blue to purple colors. Found in North America.</p>
+                        </div>
+                        <div class="species-card">
+                            <h3>Iris Virginica</h3>
+                            <p>Largest of the three, with broader petals. Native to eastern North America.</p>
+                        </div>
+                    </div>
+
+                    <p>To use the classifier, simply enter the measurements in centimeters for your Iris flower in the form below. The model will analyze these measurements and predict which species your flower belongs to.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="prediction-section">
+            <h2>Make a Prediction</h2>
+            <div class="prediction-container">
+                <div id="app">
+                    <form id="iris-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="sepal-length">Sepal Length (cm):</label>
+                                <input type="number" id="sepal-length" name="sepal-length" step="0.1" required placeholder="e.g., 5.1">
+                            </div>
+                            <div class="form-group">
+                                <label for="sepal-width">Sepal Width (cm):</label>
+                                <input type="number" id="sepal-width" name="sepal-width" step="0.1" required placeholder="e.g., 3.5">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="petal-length">Petal Length (cm):</label>
+                                <input type="number" id="petal-length" name="petal-length" step="0.1" required placeholder="e.g., 1.4">
+                            </div>
+                            <div class="form-group">
+                                <label for="petal-width">Petal Width (cm):</label>
+                                <input type="number" id="petal-width" name="petal-width" step="0.1" required placeholder="e.g., 0.2">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn">Classify Iris Flower</button>
+                    </form>
+                    <div id="result-container">
+                        <div id="result">Enter measurements to see prediction</div>
+                    </div>
+                </div>
+                <div class="measurement-guide">
+                    <h3>Measurement Guide</h3>
+                    <img src="/static/IMAGES/1_H2UmG5L1I5bzFCW006N5Ag.webp" alt="Iris Measurement Guide">
+                    <p>Measure the sepal length from the base to the tip. Measure the width at the widest point. Apply the same procedure for the petals.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-insights">
+            <h2>Dataset Insights</h2>
+            <div class="insights-container">
+                <div class="insight-card">
+                    <h3>Key Observations</h3>
+                    <p>Iris Setosa is linearly separable from the other two species, but Versicolor and Virginica have some overlap in their features.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>Feature Importance</h3>
+                    <p>Petal dimensions tend to be more discriminative than sepal dimensions for species classification.</p>
+                </div>
+                <div class="insight-card">
+                    <h3>Model Accuracy</h3>
+                    <p>Our logistic regression model achieves approximately 97% accuracy on test data.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About This Project</h3>
+                <p>This project demonstrates a practical implementation of machine learning using the Iris dataset with a logistic regression model.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: irisclassifier@gmail.com</p>
+                <p>Phone: 7984048236</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Iris Classifier Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
